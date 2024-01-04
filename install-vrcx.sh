@@ -47,21 +47,6 @@ if [[ -d $vrc_appdata ]] && [[ ! -d $vrc_dst ]]; then
 	ln -s $vrc_appdata $vrc_dst
 fi
 
-echo "Download .NET 8"
-cd /tmp
-wget -q --show-progress https://download.visualstudio.microsoft.com/download/pr/93961dfb-d1e0-49c8-9230-abcba1ebab5a/811ed1eb63d7652325727720edda26a8/dotnet-sdk-8.0.100-win-x64.exe
-
-echo "Install .NET 8"
-logs=$(wine64 dotnet-sdk-8.0.100-win-x64.exe /quiet /norestart 2>&1)
-if [ "$?" -ne "0" ]; then
-	echo "*********** Error installing .NET 8 ***********"
-	echo "$logs"
-	echo "*********** Error installing .NET 8 ***********"
-	exit 1
-fi
-
-rm dotnet-sdk-8.0.100-win-x64.exe
-
 echo "Download VRCX"
 
 if [[ ! -d $WINEPREFIX/drive_c/vrcx ]]; then
