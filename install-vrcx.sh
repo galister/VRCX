@@ -72,7 +72,7 @@ if [[ -d $HOME/.local/share/applications ]]; then
 	if [[ ! -f $HOME/.local/share/icons/VRCX.png ]]; then
 		echo "Install VRCX.png to ~/.local/share/icons"
 		cd ~/.local/share/icons/
-		wget -q --show-progress https://github.com/vrcx-team/VRCX/blob/v2023.12.24/VRCX.png
+		wget -q --show-progress https://raw.githubusercontent.com/vrcx-team/VRCX/v2023.12.24/VRCX.png
 	fi
 
 	echo "Install vrcx.desktop to ~/.local/share/applications"
