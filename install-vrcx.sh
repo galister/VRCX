@@ -47,6 +47,8 @@ if [[ -d $vrc_appdata ]] && [[ ! -d $vrc_dst ]]; then
 	ln -s $vrc_appdata $vrc_dst
 fi
 
+winetricks --force -q corefonts
+
 echo "Download VRCX"
 
 if [[ ! -d $WINEPREFIX/drive_c/vrcx ]]; then
