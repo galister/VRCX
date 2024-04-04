@@ -15,6 +15,12 @@ if [ "$1" != "force" ] && [[ $wine_version < 9.0 ]]; then
 	exit 1
 fi
 
+if ! [ -x "$(command -v winetricks)" ]; then
+  echo "You don't have winetricks installed or 'command -v winetricks' doesn't recongize it, you will want it for corefonts."
+  exit 1
+fi
+
+
 if [[ ! -d $WINEPREFIX ]]; then
 	echo "Creating Wine prefix."
 	logs=$(winecfg /v win10 2>&1)
