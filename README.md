@@ -1,3 +1,11 @@
+# Deprecated!
+
+The [VRCX Official Releases](https://github.com/vrcx-team/VRCX/releases) now work in a regular Wine 9 prefix. Please those use instead.
+
+The Linux install script is still maintained and was moved here: [galister/vrcx-linux-installer](https://github.com/galister/vrcx-linux-installer)
+
+# Original readme below
+
 <div align="center">
 
 # <img src="https://raw.githubusercontent.com/vrcx-team/VRCX/master/VRCX.ico" width="64" height="64"> </img> VRCX
